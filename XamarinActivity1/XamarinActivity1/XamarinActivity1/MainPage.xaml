@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinActivity1"
+             x:Class="XamarinActivity1.MainPage"
+             Title="Xamarin 4th Year Activity 1 - JRC">
+
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Basic Bindings">
+                <TextCell Text="Static Demo Page"
+                          Detail="Access Constant or Static Page"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StaticDemo}" />
+
+                <TextCell Text="Reference Demo Page"
+                          Detail="Access Reference Demo Page"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ReferenceDemo}" />
+
+                <TextCell Text="OnPlatform Demo Page"
+                          Detail="Access Platform Page"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:OnPlatformDemo}" />
+
+                <TextCell Text="OnIdiom Demo Page"
+                          Detail="Customize UI appearance based on the idiom of the device the application is running on"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:OnIdiomDemo}" />
+
+
+                <TextCell Text="AppThemeBinding  Demo Page"
+                          Detail=" Specify a resource to be consumed based on the current system theme."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ThemeBinding}" />
+
+
+                
+            </TableSection>
+            
+        </TableRoot>
+    </TableView>
+
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:local="clr-namespace:XamarinActivity1"
+             x:Class="XamarinActivity1.OnPlatformDemo"
+                Title="OnPlatform Demo - JRC">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView Color="{OnPlatform Yellow, iOS=Red, Android=Green, UWP=Blue}"
+         WidthRequest="{OnPlatform 250, iOS=200, Android=300, UWP=400}"  
+         HeightRequest="{OnPlatform 250, iOS=200, Android=300, UWP=400}"
+         HorizontalOptions="Center" />
+
+
+            <Label Text="The platform is Android"
+               FontSize="18"
+               VerticalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center" />
+
+
+            <Label Text="Green for Android" TextColor ="Green"
+               FontSize="18"
+               VerticalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center" />
+
+            <Label Text="Red for iOS" TextColor ="Red"
+               FontSize="18"
+               VerticalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center" />
+
+            <Label Text="Blue for UWP" TextColor ="Blue"
+               FontSize="18"
+               VerticalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
